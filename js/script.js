@@ -106,10 +106,8 @@ $(document).ready(function() {
 
             if ($(this).hasClass('bestseller__item__options__opt_active')) {
                 let picBg = $(`.bestseller__item__pic_${i}`);
-                let optionBg = $(this).css('background-image');
+                let optionBg = $(this).css('background-image').replace('url(', '').replace(')', '').replace(/\"/gi, "");
 
-                console.log(optionBg);
-                
                 picBg = $(picBg).attr('src', optionBg);
             }
           });
