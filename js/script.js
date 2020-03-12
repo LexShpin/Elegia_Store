@@ -13,7 +13,8 @@ $(document).ready(function() {
         autoplaySpeed: 5000,
         cssEase: 'linear',
         fade: true,
-        draggable: true
+        draggable: true,
+        adaptiveHeight: true
     });
 
     // slides 
