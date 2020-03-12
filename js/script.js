@@ -160,6 +160,26 @@ $(document).ready(function() {
         materialChange(i);
     } 
 
+    // Changing img in trending
+
+    function changeBgOnHover() {
+        $(`.trending__item__pic_changed_1`).on('mouseover', function() {
+            $('.trending__item__pic_changed_1').attr('src', './img/trending/trending_3b.jpg');
+        });
+        $(`.trending__item__pic_changed_1`).on('mouseout', function() {
+            $('.trending__item__pic_changed_1').attr('src', './img/trending/trending_3a.jpg');
+        });
+        
+        $(`.trending__item__pic_changed_2`).on('mouseover', function() {
+            $('.trending__item__pic_changed_2').attr('src', './img/trending/trending_4b.jpg');
+        });
+        $(`.trending__item__pic_changed_2`).on('mouseout', function() {
+            $('.trending__item__pic_changed_2').attr('src', './img/trending/trending_4a.jpg');
+        });
+    }   
+
+    changeBgOnHover();
+
     // // Timer
 
     let deadline = '2020-04-21';
@@ -212,6 +232,11 @@ $(document).ready(function() {
         
         // close the menu
         $('.mobile-menu__close').on('click', function() {
+            $('.mobile-menu').css('left', '-500%');
+            $('.overlay').css('display', 'none');
+            $('body').css('overflow', 'visible');
+        });
+        $('.mobile-menu__closed').on('click', function() {
             $('.mobile-menu').css('left', '-500%');
             $('.overlay').css('display', 'none');
             $('body').css('overflow', 'visible');
